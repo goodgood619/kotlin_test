@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var retrofit = Retrofit.Builder()
-            .baseUrl("URL이름")
+            .baseUrl("http://10.0.2.2:8080/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
         val server = retrofit.create(ApiService::class.java)
